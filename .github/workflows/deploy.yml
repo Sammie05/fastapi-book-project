@@ -15,10 +15,9 @@ jobs:
           username: ubuntu
           key: ${{secrets.EC2_SSH_KEY}}
           script: |
-            cd /home/ubuntu/fastapi-app || exit 1
-            git pull origin main || exit 1
+            cd /home/ubuntu/fastapi-app
+            git pull origin main
             source venv/bin/activate
-            pip install -r requirements.txt || exit 1
-            sudo systemctl restart fastapi || exit 1
-            sudo systemctl restart nginx || exit 1
-
+            pip install -r requirements.txt
+            sudo systemctl restart fastapi
+            sudo systemctl restart nginx
