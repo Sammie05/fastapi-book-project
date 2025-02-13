@@ -56,7 +56,7 @@ async def get_book(book_id: int) -> Book:
         # If the book is not found, raise an HTTPException
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail="Book not found"
+            detail="Book not found here"
         )
     # Return the Book instance; FastAPI will handle the conversion to JSON
     return book
