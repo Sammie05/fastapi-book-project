@@ -30,7 +30,8 @@ jobs:
       - name: Deploy to Server
         run: |
           ssh server '
-            cd fastapi
+            touch random
+            cd fastapi-book-project
             git fetch origin main
             git reset --hard origin/main
             source env/bin/activate
